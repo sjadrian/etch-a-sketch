@@ -1,0 +1,19 @@
+.class {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    border: 1px solid black;
+    width: 24px;
+    height: 24px;
+}
+
+.box:hover {
+    background-color: aqua;
+}
