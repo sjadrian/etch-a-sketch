@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Etch-a-Sketch application">
     <title>Etch-a-sketch</title>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css"> 
@@ -10,16 +11,32 @@
 </head>
 <body>
     <header>
-        <h1>
-            Etch-a-sketch
-        </h1>
+        <h1> Etch-a-sketch </h1>
+        <p class="subtext"> Click and drag to draw! </p>
     </header>
 
     <main>
-        <div class="container">
+        <div class="main-container">
+            <div class="buttons">
+   
+                <button class="button button-color">Color mode</button>
+                <button class="button button-eraser">Eraser mode</button>
+                <button class="button button-clear">Clear palette</button>
 
+                <div class="slidecontainer">
+                    <label for="gridSizeSlider" class="gridsize"> Grid Size </label>
+                    <span class="slidervalue"> 20 x 20 </span>
+                    <input type="range" id="gridSizeSlider" min="1" max="50" value="20" class="slider" oninput="updateSlider(this.value)">
+                </div>
+            </div>
+    
+            <div class="container"></div>
         </div>
     </main>
+
+    <footer>
+        Copyright © 2023 sjadrian
+    </footer>
 
 </body>
 </html>

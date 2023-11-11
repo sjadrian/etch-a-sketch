@@ -1,19 +1,81 @@
-.class {
+:root {
+    --main-bg-color: beige;
+    --button-bg-color: beige;
+    --button-active-bg-color: black;
+    --button-active-color: beige;
+}
+
+html {
+    background-color: var(--main-bg-color);
+}
+
+body {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    font-size: 32px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.button {
+    background-color: var(--button-bg-color);
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.button-active {
+    background-color: var(--button-active-bg-color);
+    color: var(--button-active-color);
+}
+
+.slidecontainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.slider {
+    accent-color: black;
+}
+
+.container {
+    flex: 1;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 600px;
+    height: 600px;
+    background-color: white;
 }
 
 .row {
     display: flex;
-    flex-direction: row;
 }
 
 .box {
-    border: 1px solid black;
-    width: 24px;
-    height: 24px;
+    border: 1px solid var(--main-bg-color);
+    background-color: white;
 }
 
-.box:hover {
-    background-color: aqua;
+
+footer {
+    text-align: center;
+    padding: 12px;
 }
+
+.color-black { background-color: black; }
